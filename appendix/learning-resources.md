@@ -19,6 +19,7 @@
 - [Tree of Thoughts](https://arxiv.org/abs/2305.10601) - Deliberate problem solving
 - [HuggingGPT](https://arxiv.org/abs/2303.17580) - LLM task planning + specialist models
 - [MRKL Systems](https://arxiv.org/abs/2205.00445) - Neuro-symbolic agent architecture
+- [Proxifield: Decentralized Multi-Agent Communication through Semantic Proximity](https://arxiv.org/abs/2609.20889) - Research protocol for sparse semantic routing between agents, evaluated on simulated drone search-and-rescue and HiddenBench; scaling and agent-failure tests are limited to the drone environment. `[benchmark]`.
 
 ### Books
 - Building LLM Apps (O'Reilly) - Practical LLM application development
