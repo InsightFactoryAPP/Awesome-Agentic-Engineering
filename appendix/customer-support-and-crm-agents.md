@@ -2,6 +2,8 @@
 
 > Audience: practitioners · Evidence class: field report
 
+Last reviewed: September 2026 (link maintenance).
+
 ### Support Agents
 
 | Agent | Description |
@@ -23,7 +25,7 @@
 | [Zoho CRM (Zia)](https://zoho.com/crm) | Predictive, sentiment, voice commands. |
 | [Pipedrive AI](https://pipedrive.com) | Email gen, deal priority, smart reports. |
 | [Dynamics 365 Copilot](https://dynamics.microsoft.com) | Drafting, summarizing, translating. Power Platform. |
-| [ServiceNow AI Agents](https://servicenow.com) | Orchestrator across IT, HR, CRM. |
+| [ServiceNow AI Agents](https://www.servicenow.com/products/ai-agents.html) | Orchestrator across IT, HR, CRM. |
 | [Creatio](https://creatio.com) | No-code. Pre-configured agents. |
 | [Salesmate](https://salesmate.io) | Call summarization, lead qualification. |
 
@@ -37,4 +39,3 @@
 | [Lavender](https://lavender.ai) | AI email coach. Real-time scoring. |
 
 ---
-

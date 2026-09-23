@@ -2,7 +2,7 @@
 
 > Audience: practitioners · Evidence class: mixed
 
-_Last reviewed: April 2026._
+_Last reviewed: September 2026 (link maintenance)._
 
 Open-weight models selected for agentic relevance: native tool/function-calling, long context for trajectories, or explicit reasoning modes. Cap of 5–8; models without credible agent-workload evidence are excluded regardless of general benchmark wins. Evidence tags follow the [Benchmark and Evidence Policy](benchmark-and-evidence-policy.md).
 
@@ -15,7 +15,6 @@ Open-weight models selected for agentic relevance: native tool/function-calling,
 | [MiniMax-M2](https://github.com/MiniMax-AI/MiniMax-M2) | MiniMax | MIT | 230B MoE (A10B) | Agent-first open-weight model with interleaved thinking and tool use; designed for end-to-end agent workflows. | `[official]` |
 | [Gemma 3](https://github.com/google-deepmind/gemma) | Google DeepMind | Gemma Terms of Use | 1B–27B | Efficient multimodal family; small sizes suitable for edge / on-device agents with function calling. | `[official]` |
 | [Mistral Large 2](https://mistral.ai/news/mistral-large-2407/) | Mistral | Mistral Research License | 123B | Function calling and JSON-mode support from a European provider; strong tool-use reliability. | `[official]` |
-| [Phi-4](https://github.com/microsoft/phi-4) | Microsoft | MIT | 14B | Compact reasoning-tuned model; viable planner/actor for on-device and resource-constrained agents. | `[official]` · `[benchmark]` [tech report](https://arxiv.org/abs/2412.08905) |
+| [Phi-4](https://huggingface.co/microsoft/phi-4) | Microsoft | MIT | 14B | Compact reasoning-tuned model; viable planner/actor for on-device and resource-constrained agents. | `[official]` · `[benchmark]` [tech report](https://arxiv.org/abs/2412.08905) |
 
 ---
-

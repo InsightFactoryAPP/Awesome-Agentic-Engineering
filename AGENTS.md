@@ -264,7 +264,6 @@ node .github/scripts/find-stale-entries.mjs
 FRESHNESS_MONTHS=12 node .github/scripts/find-stale-entries.mjs
 ```
 
-
 ## Stop and Ask
 
 Stop and ask the maintainer before:

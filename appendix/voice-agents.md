@@ -28,4 +28,3 @@
 | [Vocode](https://github.com/vocodedev/vocode-python) | OSS voice-based LLM agents. |
 
 ---
-

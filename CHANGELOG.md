@@ -5,11 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and this list uses date-stamped phase headings rather than SemVer versions
 because the repo is a curated knowledge base, not a shipped package.
 
-The RSS feed at [`feed.xml`](feed.xml) is generated from this file.
+The RSS feed at [`feed.xml`](docs/feed.xml) is generated from this file.
 
 ## [Unreleased]
 
 - **Added** Repo0 to the Spec-Driven Development resources as a paper on design-driven repository generation via a Dual-DAG of requirements and components.
+- **Added** Proxifield to Reference Architectures and the Learning Resources key papers; fixed Markdown and link-check findings, replaced the unavailable Live Site button with publishing instructions, and removed the Portia entry after no working official source could be verified.
 - **Added** DataPrep-Bench to the Evaluation & Safety benchmarks for evaluating LLMs and agents on automated training-data preparation workflows.
 - **Added** ClawBench to the Evaluation & Safety benchmarks for live-site browser-agent evaluation with isolated runs and captured execution evidence.
 - **Added** LLMs Get Lost in Evolving User Intent to the Evaluation & Safety benchmarks for testing agents under incrementally revealed, revised, and redirected user intent.
