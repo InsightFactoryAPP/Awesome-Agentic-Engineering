@@ -10,12 +10,7 @@ A curated map of agentic AI systems — covering architectures, frameworks, memo
 
 This is not a tool list. It's a structured guide to building **reliable, observable, production-grade agentic systems**, evaluated against rigorous engineering dimensions.
 
-<a href="https://natnew.github.io/Awesome-Agentic-Engineering/">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/github/live-site-dark.svg">
-    <img alt="Live Site" src="assets/github/live-site-light.svg" height="36">
-  </picture>
-</a>
+[Site source and publishing instructions](docs/README.md)
 
 <details>
 <summary><h2 style="display:inline-block">🚀 Get Started</h2></summary>
@@ -37,18 +32,16 @@ Add observability and safety constraints
 
 ## 📑 Table of Contents
 
-
-
 - [🧭 Thesis](#-thesis)
 - [🧱 Agentic Engineering Reference Stack](#-agentic-engineering-reference-stack)
-- [⚖️ Architecture Decision Guide](#️-architecture-decision-guide)
+- [⚖️ Architecture Decision Guide](#architecture-decision-guide)
 - [🧩 Core Agentic Patterns](#-core-agentic-patterns)
-- [🏗️ Reference Architectures](#-reference-architectures)
+- [🏗️ Reference Architectures](#reference-architectures)
 - [📐 Spec-Driven Development](#-spec-driven-development)
 - [🧠 Memory Systems](#-memory-systems)
 - [📊 Formal Evaluation Rubric](#-formal-evaluation-rubric)
 - [Benchmark and Evidence Policy](#benchmark-and-evidence-policy)
-- [⚙️ Orchestration Frameworks](#-orchestration-frameworks)
+- [⚙️ Orchestration Frameworks](#orchestration-frameworks)
 - [📡 Protocols and Standards](#-protocols-and-standards)
 - [🛂 Agent Authority, Identity & Delegation](#-agent-authority-identity--delegation)
 - [🧭 Reasoning & Planning Models](#-reasoning--planning-models)
@@ -60,6 +53,7 @@ Add observability and safety constraints
 - [🤝 Contributing](#-contributing)
 
 ### 📂 Appendix
+
 - [🧱 Agentic Engineering Reference Stack](appendix/agentic-engineering-reference-stack.md)
 - [🌐 Browser and Desktop Agents](appendix/browser-and-desktop-agents.md)
 - [🎙 Voice Agents](appendix/voice-agents.md)
@@ -113,6 +107,8 @@ Skip a tier and the layers above it become indefensible.
 
 ---
 
+<a id="architecture-decision-guide"></a>
+
 ## ⚖️ Architecture Decision Guide
 
 > Audience: practitioners · Evidence class: mixed
@@ -146,6 +142,8 @@ These patterns underpin most production-grade agentic systems.
 
 ---
 
+<a id="reference-architectures"></a>
+
 ## 🏗️ Reference Architectures
 
 > Audience: practitioners · Evidence class: mixed
@@ -156,6 +154,7 @@ Representative system designs for real-world use.
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **DeerFlow** | *Emerging* | **Is:** Open-source orchestration system combining sub-agents, memory, and sandboxes.<br>**Demonstrates:** Workflow-oriented orchestration across agents with shared execution context. | Strong system-level reference for memory, sandbox, and skills composition. | Higher setup complexity and a heavier runtime surface than most teams need initially. | Strong fit for compound research/coding workflows and teams studying full-stack agent architectures. Poor fit for lightweight orchestration or narrowly scoped tasks. | Hierarchical multi-agent orchestration. | Requires explicit sandbox policy, tool boundaries, and operator oversight before untrusted code execution. |
 | **SWE-agent** | *Experimental* | **Is:** Autonomous SWE system using a specialized Agent-Computer Interface (ACI).<br>**Demonstrates:** Narrow action spaces and interface design tuned for code-repair tasks. | Streamlined command space, compressed history handling, and a clear task boundary for patch workflows. | Benchmark-oriented design, high token cost, and long end-to-end fix latency on larger tasks. | Strong fit for isolated PRs and self-contained bug fixes. Poor fit for broad refactors or environments without standard build tooling. | Single agent with a highly specialized action space (ACI). | Needs tight repository scoping, review gates, and execution controls to reduce silent code regressions. |
+| **[Proxifield](https://arxiv.org/abs/2609.20889)** | *Research preprint* `[official]` | **Is:** Multi-agent communication protocol with sparse semantic routing.<br>**Demonstrates:** Proposal, peer-reply, and action-commitment rounds. `[benchmark]` | Routes using direct addresses, information needs, plan alignment, and complementary observations. `[benchmark]` | Scaling and permanent-failure experiments cover only simulated drone search-and-rescue; broader validation remains open. `[benchmark]` | Studied on drone search-and-rescue and HiddenBench collective reasoning. `[benchmark]` | Decentralized agent decisions with deterministic graph construction. `[benchmark]` | Peer feedback is advisory; the paper does not establish production authorization or audit controls. `[author assessment]` |
 
 ---
 
@@ -163,7 +162,7 @@ Representative system designs for real-world use.
 
 > Audience: practitioners · Evidence class: mixed
 
-_Last reviewed: April 2026._
+*Last reviewed: September 2026 (link maintenance).*
 
 Agentic systems amplify whatever intent you feed them — including vague intent. **Spec-driven development (SDD)** treats the specification as the load-bearing artifact: a durable, reviewable document that describes *what* the system should do and *how* it should behave, from which plans, code, and tests are generated (and regenerated) by agents. It is the production-grade answer to "vibe coding."
 
@@ -191,7 +190,7 @@ Evidence tags follow the [Benchmark and Evidence Policy](#benchmark-and-evidence
 | Resource | Role | Description | Evidence |
 | :--- | :--- | :--- | :--- |
 | **[GitHub Spec Kit](https://github.com/github/spec-kit)** | Toolkit / methodology | Open-source toolkit for spec-driven development with agentic coding assistants (Copilot, Claude Code, Cursor, Gemini CLI). Defines the `/specify` → `/plan` → `/tasks` → `/implement` workflow used in this repo's own `specs/` directory. | `[official]` [repo](https://github.com/github/spec-kit) · `[official]` [announce](https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/) |
-| **[Kiro](https://kiro.dev)** | IDE | AWS IDE built around spec-driven development: specs, steering files, and hooks drive agent work from requirements through tasks. First-party reference implementation of SDD in an IDE. | `[official]` [docs](https://kiro.dev/docs/) · `[field report]` [AWS launch post](https://aws.amazon.com/blogs/aws/introducing-kiro-an-ai-ide-that-thinks-like-a-developer/) |
+| **[Kiro](https://kiro.dev)** | IDE | AWS IDE built around spec-driven development: specs, steering files, and hooks drive agent work from requirements through tasks. First-party reference implementation of SDD in an IDE. | `[official]` [docs](https://kiro.dev/docs/) · `[official]` [launch post](https://kiro.dev/blog/introducing-kiro/) |
 | **[OpenAI Model Spec](https://model-spec.openai.com/)** | Behavioural spec | First-party example of treating *model behaviour* as a versioned, public spec — objectives, rules, defaults, and conflict resolution. A reference for how to write a spec an agent can actually be aligned to. | `[official]` [spec](https://model-spec.openai.com/) · `[official]` [post](https://openai.com/index/sharing-the-latest-model-spec/) |
 | **[AGENTS.md](https://agents.md/)** | Project-level agent spec | Simple convention for a repository-scoped file that instructs coding agents about build, test, style, and conventions. Widely supported across agent CLIs. | `[official]` [site](https://agents.md/) |
 | **[Anthropic Claude Skills (SKILL.md)](https://www.claude.com/skills)** | Skill-level spec | Declarative, self-contained skill specs (`SKILL.md`) that package instructions, tools, and examples agents can discover and load on demand. Treats individual capabilities as versioned spec artifacts. | `[official]` [docs](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) |
@@ -208,7 +207,7 @@ SDD is not limited to new projects or a single team. The spec becomes a portable
 | **Brownfield projects** | Reverse-engineer specs from existing code and behaviour, then use them as the contract for future agent-authored changes. | Start narrow (one module or flow), treat the spec as the accepted behaviour, and expand coverage incrementally. Agents modify against the spec, not the full legacy codebase. |
 | **Shared across orgs** | Specs, prompts, evals, and skill packs (`SKILL.md`, `AGENTS.md`, prompt libraries) are repo-level artifacts that can be open-sourced, forked, and re-used — like shared test suites or style guides. | Treat prompts and evals as first-class, versioned assets; publish them alongside code so research, patterns, and hard-won lessons compound across teams rather than staying trapped in one org. |
 
-> **How this repo uses SDD:** the [`specs/`](specs/) directory contains phased specs (requirements → plan → validation) generated and executed against with Spec Kit. The `tasks/todo.md`, phase validation scripts, and PR bodies are derived artifacts. See [CONTRIBUTING.md](CONTRIBUTING.md) for the contributor-facing workflow.
+> **How this repo uses SDD:** the local-only `specs/` directory contains phased specs (requirements → plan → validation) generated and executed against with Spec Kit. The `tasks/todo.md`, phase validation scripts, and PR bodies are derived artifacts. See [CONTRIBUTING.md](CONTRIBUTING.md) for the contributor-facing workflow.
 
 ---
 
@@ -216,7 +215,7 @@ SDD is not limited to new projects or a single team. The spec becomes a portable
 
 > Audience: practitioners · Evidence class: mixed
 
-_Last reviewed: April 2026._
+*Last reviewed: April 2026.*
 
 Memory is a first-class concern in agentic systems. Rather than treating memory as a simple array of previous messages, production systems require structured approaches to state, persistence, retrieval, and **experience reuse**. Four categories — working, episodic, procedural, semantic — remain the core architectural choices, but recent frontier research also shows memory is increasingly being used to **improve future agent behaviour**, not merely to store past context.
 
@@ -244,6 +243,7 @@ Recent research shows frontier agent systems moving beyond simple retrieval towa
 ### Architectural Patterns: Shared vs. Private Memory
 
 In multi-agent systems, memory boundaries are architectural decisions:
+
 - **Private Agent Memory**: Each agent maintains its own semantic and episodic stores. Prevents context leakage and maintains strong role boundaries.
 - **Shared Workspace (Global Memory)**: A common blackboard or shared state where multiple agents read and write. Requires collision management and strict typing.
 
@@ -280,7 +280,7 @@ Specialised infrastructure for managing agent memory.
 ## 📊 Formal Evaluation Rubric
 
 > Audience: maintainers · Evidence class: mixed
-
+>
 > **🎯 Evaluation principle:** rubrics assess quality, test suites verify behaviour, assertions enforce invariants, and LLM-as-a-judge is used only in tightly scoped regression tests.
 
 Every major framework and architecture in this repository is judged against the following **Required Scoring Dimensions**. We evaluate systems based on engineering rigor, not marketing copy.
@@ -321,11 +321,13 @@ Canonical resources are trusted here because they define what counts as evidence
 - Record `Last reviewed: Month YYYY` in rapidly changing sections such as product lists, vendor capability summaries, and release-sensitive guidance.
 - See [appendix/benchmark-and-evidence-policy.md](appendix/benchmark-and-evidence-policy.md) for the full policy.
 
+<a id="orchestration-frameworks"></a>
+
 ## ⚙️ Orchestration Frameworks
 
 > Audience: practitioners · Evidence class: mixed
 
-_Last reviewed: April 2026._
+*Last reviewed: September 2026 (link maintenance).*
 
 ### Deep Dives
 
@@ -333,8 +335,8 @@ Evidence tags follow the [Benchmark and Evidence Policy](#benchmark-and-evidence
 
 | Framework | Ecosystem Maturity | Description | Architectural Strengths | Operational Constraints | Workload Suitability | Design Paradigm | Governance Fit | Evidence |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **LangGraph** | *Production-ready* | **Is:** Stateful orchestration framework building directed graphs with typed state.<br>**Demonstrates:** Deterministic execution control mixed with LLM reasoning. | Explicit state management, persistence, and support for complex multi-actor workflows. | Verbose abstractions, steep learning curve, and graph sprawl if the workflow is over-modeled. | Strong fit for multi-step, stateful, and interruptible agent systems. Poor fit for simple single-prompt completions or linear chains. | DAG-based state machine. | Good fit for auditable workflows and approval gates, but graph edges must be tightly constrained to avoid runaway loops. | `[official]` [docs](https://langchain-ai.github.io/langgraph/) · `[field report]` [LinkedIn SQL Bot](https://blog.langchain.dev/customers-linkedin/) |
-| **Microsoft Agent Framework** | *Production-ready* | **Is:** Microsoft's unified agent framework merging Semantic Kernel and AutoGen; first-class MCP and A2A support.<br>**Demonstrates:** Enterprise-grade agent composition with typed plugins, approval workflows, and Azure integration. | Strong .NET + Python parity, typed function-calling, native MCP/A2A, and OpenTelemetry tracing. | Broader Azure coupling in the managed path; framework surface is still stabilizing post-merger. | Strong fit for enterprise teams already on Azure / Semantic Kernel and needing multi-language agents. Poor fit for teams wanting a minimal Python-only stack. | Typed plugin graph with pluggable orchestration (sequential, group chat, handoff). | Strong — supports approval gates, policy plugins, and audit logging out of the box. | `[official]` [repo](https://github.com/microsoft/agent-framework) · `[official]` [announce](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework/) |
+| **LangGraph** | *Production-ready* | **Is:** Stateful orchestration framework building directed graphs with typed state.<br>**Demonstrates:** Deterministic execution control mixed with LLM reasoning. | Explicit state management, persistence, and support for complex multi-actor workflows. | Verbose abstractions, steep learning curve, and graph sprawl if the workflow is over-modeled. | Strong fit for multi-step, stateful, and interruptible agent systems. Poor fit for simple single-prompt completions or linear chains. | DAG-based state machine. | Good fit for auditable workflows and approval gates, but graph edges must be tightly constrained to avoid runaway loops. | `[official]` [docs](https://langchain-ai.github.io/langgraph/) · `[field report]` [LinkedIn SQL Bot](https://www.linkedin.com/blog/engineering/ai/practical-text-to-sql-for-data-analytics) |
+| **Microsoft Agent Framework** | *Production-ready* | **Is:** Microsoft's unified agent framework merging Semantic Kernel and AutoGen; first-class MCP and A2A support.<br>**Demonstrates:** Enterprise-grade agent composition with typed plugins, approval workflows, and Azure integration. | Strong .NET + Python parity, typed function-calling, native MCP/A2A, and OpenTelemetry tracing. | Broader Azure coupling in the managed path; framework surface is still stabilizing post-merger. | Strong fit for enterprise teams already on Azure / Semantic Kernel and needing multi-language agents. Poor fit for teams wanting a minimal Python-only stack. | Typed plugin graph with pluggable orchestration (sequential, group chat, handoff). | Strong — supports approval gates, policy plugins, and audit logging out of the box. | `[official]` [repo](https://github.com/microsoft/agent-framework) · `[official]` [announce](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/) |
 | **AutoGen** | *Production-ready* | **Is:** Microsoft Research multi-agent conversation framework; now an orchestration pattern inside Microsoft Agent Framework.<br>**Demonstrates:** Conversable agents with group chat, code-executor, and human-proxy patterns. | Battle-tested multi-agent conversation patterns, large research footprint, flexible role composition. | Emergent conversation loops need explicit termination conditions; observability requires added tooling. | Strong fit for research on multi-agent collaboration and code-gen crews. Poor fit for strictly deterministic workflows. | Conversational multi-agent loop with configurable managers. | Needs explicit stop conditions and sandboxed code execution to be safe in production. | `[official]` [v0.4 docs](https://microsoft.github.io/autogen/) · `[benchmark]` [AutoGen paper](https://arxiv.org/abs/2308.08155) |
 | **OpenAI Agents SDK** | *Production-ready* | **Is:** OpenAI's official agents SDK with handoffs, guardrails, and sessions; successor path to Assistants API.<br>**Demonstrates:** First-party multi-step agents with tool-use, tracing, and structured handoffs. | Tight integration with OpenAI tools, built-in tracing, ergonomic Python API, provider-agnostic via LiteLLM. | Primary optimization target is OpenAI models; porting to other providers loses some ergonomics. | Strong fit for teams shipping OpenAI-backed agents quickly with tracing. Poor fit for strict provider portability or local-only models. | Handoff-based multi-agent loop with sessions. | Viable for hosted approval flows; guardrails are first-class primitives. | `[official]` [docs](https://openai.github.io/openai-agents-python/) · `[official]` [repo](https://github.com/openai/openai-agents-python) |
 | **CrewAI** | *Emerging* | **Is:** Multi-agent collaboration framework where agents are assigned roles, goals, and tools.<br>**Demonstrates:** Role-based agentic workflows with sequential and hierarchical processes. | Simple mental model and fast team-based decomposition for prototypes; growing enterprise feature set. | Less control for highly complex or non-standard systems; observability and typed state are weaker than LangGraph/MAF. | Strong fit for rapid prototyping of agent teams. Poor fit for deterministic execution, rigorous type safety, or custom orchestration loops. | Role-based sequential or hierarchical process execution. | Requires added guardrails and observability to manage emergent loops and inconsistent agent behaviour. | `[official]` [docs](https://docs.crewai.com/) · `[field report]` [case studies](https://www.crewai.com/case-studies) |
@@ -380,7 +382,6 @@ Broader catalog beyond the deep-dive set. Each subsection capped at 8 entries; e
 | [Smolagents](https://github.com/huggingface/smolagents) | Py | HuggingFace minimal agents (~1000 lines); code-action agents with sandboxed execution. | `[official]` |
 | [Agno](https://github.com/agno-agi/agno) | Py | Lightweight, model-agnostic agent framework with native multi-modal support. | `[official]` |
 | [Upsonic](https://github.com/upsonic/upsonic) | Py | MCP-first framework with minimal setup and typed task graphs. | `[official]` |
-| [Portia AI](https://github.com/portia-ai/portia-sdk-python) | Py | Plan-based agent framework aimed at reliable production deployments with approval gates. | `[official]` |
 | [Mastra](https://github.com/mastra-ai/mastra) | TS | TypeScript-first framework with observability, workflows, and memory. | `[official]` |
 
 ---
@@ -389,13 +390,13 @@ Broader catalog beyond the deep-dive set. Each subsection capped at 8 entries; e
 
 > Audience: practitioners · Evidence class: official
 
-_Last reviewed: April 2026._
+*Last reviewed: September 2026 (link maintenance).*
 
 Protocols are the stable contracts between agents, tools, and hosts. Each entry below distinguishes the **specification** from any specific implementation — mixing the two is a repeat anti-pattern (see [ANTI-PATTERNS.md](ANTI-PATTERNS.md)).
 
 | Protocol | Kind | Description | Evidence |
 |----------|------|-------------|----------|
-| [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) | Open spec | Anthropic-authored open standard for exposing tools, resources, prompts, and sampling to LLM hosts; wide multi-vendor adoption in 2025–2026. | `[official]` [spec](https://spec.modelcontextprotocol.io/) |
+| [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) | Open spec | Anthropic-authored open standard for exposing tools, resources, prompts, and sampling to LLM hosts; wide multi-vendor adoption in 2025–2026. | `[official]` [spec](https://modelcontextprotocol.io/specification/) |
 | [A2A (Agent2Agent)](https://github.com/a2aproject/A2A) | Open spec | Google-originated, Linux Foundation–hosted protocol for secure cross-agent communication across vendors and frameworks. | `[official]` [spec](https://a2a-protocol.org/) |
 | [OpenAI Function / Tool Calling](https://platform.openai.com/docs/guides/function-calling) | Vendor API | Native structured tool invocation for OpenAI models; JSON-schema-typed tool definitions. | `[official]` |
 | [Anthropic Tool Use](https://docs.anthropic.com/en/docs/build-with-claude/tool-use) | Vendor API | Native structured tool invocation for Claude models; supports parallel tool calls and computer-use tools. | `[official]` |
@@ -407,7 +408,7 @@ Protocols are the stable contracts between agents, tools, and hosts. Each entry 
 
 > Audience: practitioners, AI security, enterprise architects · Evidence class: mixed
 
-_Last reviewed: April 2026._
+*Last reviewed: April 2026.*
 
 Protocols like MCP, A2A, and function calling explain **how** agents connect to tools and systems. This section covers **who or what is authorised** to use those connections, and how that authority is governed in production — what the industry has begun to call the **AI Agent Authority Gap**.
 
@@ -466,7 +467,7 @@ The practical consequence is **sequencing**: an enterprise cannot safely govern 
 
 > Audience: researchers · Evidence class: benchmark
 
-_Last reviewed: July 2026._
+*Last reviewed: July 2026.*
 
 Models that do **explicit reasoning or planning at inference time** — chain-of-thought baked into the decoding loop, extended thinking budgets, or trained planner heads. They change the shape of agent loops: the model absorbs work that used to live in a planner node, which shifts where you spend tokens, latency, and trust. Cap of 5–8 entries; selected for agentic relevance, not general benchmark wins. Same-family tiers (e.g. `mini` / `nano`, Sonnet / Haiku, Flash / Flash-Lite) are grouped into one row because they share the same reasoning interface and differ mainly in latency and cost.
 
@@ -488,7 +489,7 @@ Models that do **explicit reasoning or planning at inference time** — chain-of
 
 > Audience: researchers · Evidence class: benchmark
 
-_Last reviewed: July 2026._
+*Last reviewed: September 2026 (link maintenance).*
 
 This section covers frameworks and operational tooling for testing agent quality, correctness, task completion, regressions, and system behaviour, as well as security scanning, red teaming, policy testing, and misalignment research. Evidence tags follow the [Benchmark and Evidence Policy](#benchmark-and-evidence-policy).
 
@@ -549,7 +550,7 @@ This section covers frameworks and operational tooling for testing agent quality
 | [LiveCodeBench](https://livecodebench.github.io) | Contamination-resistant coding benchmark with time-stamped problems from LeetCode/AtCoder/Codeforces; complements SWE-bench's repo-issue workload. | `[official]` · `[benchmark]` [paper](https://arxiv.org/abs/2403.07974) |
 | [WebVoyager](https://github.com/MinorJerry/WebVoyager) | Web-agent benchmark on live production websites (not snapshots); tests multimodal browsing under real network and UI drift conditions. | `[official]` · `[benchmark]` [paper](https://arxiv.org/abs/2401.13919) |
 | [ClawBench](https://github.com/TIGER-AI-Lab/ClawBench) | Browser-agent benchmark on live production websites with isolated runs, final-request interception, and five-layer execution evidence. | `[official]` · `[benchmark]` [paper](https://arxiv.org/abs/2604.08523) |
-| [DataPrep-Bench](https://dataprep-bench.github.io/) | Evaluates LLMs and agents on automated training-data preparation workflows, adding a data-centric workload for comparing multi-stage preparation capabilities beyond conventional task-execution benchmarks. | `[official]` · `[benchmark]` [paper](https://arxiv.org/search/?query=DataPrep-Bench%3A+Benchmarking+LLMs+as+Training+Data+Preparators&searchtype=title) |
+| [DataPrep-Bench](https://datapreparationbench.github.io/) | Evaluates LLMs and agents on automated training-data preparation workflows, adding a data-centric workload for comparing multi-stage preparation capabilities beyond conventional task-execution benchmarks. | `[official]` · `[benchmark]` [paper](https://arxiv.org/abs/2607.20465) |
 
 ### Safety Risk Surfaces & Mitigations
 
@@ -642,8 +643,6 @@ Companion field guides by the same maintainer covering adjacent areas of AI. Rea
 ## 🤝 Contributing
 
 <img src="assets/github/contributors-banner.png" alt="We love Contributors" width="720">
-
-
 
 Thrilled to have you here.<br>
 Whether it's a quick typo fix, a fresh resource,<br>
