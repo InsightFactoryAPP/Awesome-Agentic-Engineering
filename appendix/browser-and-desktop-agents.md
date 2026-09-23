@@ -38,4 +38,3 @@ Computer-use and browser agents operate on GUI surfaces (DOM, pixels, or accessi
 | [WindowsAgentArena](https://github.com/microsoft/WindowsAgentArena) | Benchmark for Windows desktop agents across real applications. | `[official]` · `[benchmark]` |
 
 ---
-
