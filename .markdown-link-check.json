@@ -1,5 +1,9 @@
 {
   "ignorePatterns": [
+    {
+      "pattern": "^https://www\\.servicenow\\.com/products/ai-agents\\.html$",
+      "comment": "Verified via browser and local link check on 2026-09-23; repeated ESOCKETTIMEDOUT from GitHub-hosted CI. Exempt only this canonical URL."
+    },
     { "pattern": "^https?://localhost" },
     { "pattern": "^https?://127\\.0\\.0\\.1" },
     { "pattern": "^https?://(www\\.)?linkedin\\.com" },

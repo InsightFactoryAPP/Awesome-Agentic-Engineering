@@ -14,4 +14,3 @@
 | [r/LocalLLaMA](https://reddit.com/r/LocalLLaMA) | Self-hosted LLM community |
 
 ---
-

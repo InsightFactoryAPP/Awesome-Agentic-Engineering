@@ -53,4 +53,3 @@ Descriptions in this appendix prioritise workflow characteristics and deployment
 | [Vizcom](https://vizcom.ai) | Real-time AI rendering for industrial designers. |
 
 ---
-

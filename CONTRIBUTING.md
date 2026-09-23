@@ -1,11 +1,13 @@
 # Contributing to Awesome Agentic Engineering
 
-First off, thank you for considering contributing to Awesome Agentic Engineering! 
+First off, thank you for considering contributing to Awesome Agentic Engineering!
 
 This repository is **not** an exhaustive directory of every tool that exists. It is a heavily curated, opinionated map of agentic AI systems — with a strict focus on architectures, frameworks, memory, evaluation, and safety for production-grade engineering.
 
 ## The Core Philosophy
+
 We prioritize:
+
 - **Reliability over novelty**
 - **Evaluation over intuition**
 - **Architecture over tooling**
@@ -109,7 +111,7 @@ We reject "tool list energy." Every major framework and architecture is judged a
 To keep the repository highly structured and focused, **all major contributions must meet the following criteria**:
 
 1. **Rigorous Evaluation**: Use the rubric above to formulate your assessment.
-2. **No Marketing Fluff**: Provide an honest, engineering-focused assessment of the system's pros and cons. 
+2. **No Marketing Fluff**: Provide an honest, engineering-focused assessment of the system's pros and cons.
 3. **Evidence of Real-World Usage**: Preference is heavily given to tools with demonstrated production adoption and operational maturity.
 4. **Evidence Discipline**: Anchor substantive claims to canonical sources, tag the evidence type, and add `Last reviewed` dates for rapidly changing sections.
 
@@ -138,7 +140,7 @@ If you update a rapidly changing section such as a product list or API capabilit
 
 ### Updating Existing Sections
 
-We highly encourage updates to existing sections if definitions become outdated, or if the architectural strengths, operational constraints, or governance profile of a framework substantively shift due to a major ecosystem update. 
+We highly encourage updates to existing sections if definitions become outdated, or if the architectural strengths, operational constraints, or governance profile of a framework substantively shift due to a major ecosystem update.
 
 ## The Pull Request Process
 
@@ -199,6 +201,6 @@ Two companion workflows run alongside:
 - **`phase-6 new-tool`** (manual dispatch) drafts a rubric-aligned entry for a candidate URL and opens a tracking issue.
 - **`phase-6 landscape-scan`** (weekly, Mondays 09:00 UTC) maintains one rolling **"Weekly landscape scan"** digest issue listing stale entries plus recent-PR / recent-issue candidates.
 
-All three are path-scoped where sensible, advisory (`continue-on-error: true`), and reproducible locally via `repo-agent workflow ...` — see [`tools/repo-agent/README.md`](tools/repo-agent/README.md).
+All three are path-scoped where sensible, advisory (`continue-on-error: true`), and reproducible locally via `repo-agent workflow ...` — see the local-only `tools/repo-agent/README.md` when that tooling is installed.
 
 Thanks for helping keep the repository engineering-focused and usable.

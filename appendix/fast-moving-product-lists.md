@@ -4,7 +4,7 @@
 
 ---
 
-> Last reviewed: March 2026
+> Last reviewed: September 2026 (link maintenance)
 >
 > Evidence note: verify current capabilities against official docs or first-party repos before treating an entry as current. Inclusion here is not benchmark evidence and does not imply production maturity.
 
@@ -104,7 +104,7 @@ Descriptions in this appendix prioritise delivery model, control surface, operat
 |-------|------------- |
 | [Claude Deep Research](https://claude.ai) | Multi-step investigation with citations. |
 | [ChatGPT Deep Research](https://chat.openai.com) | Extended reasoning, web browsing, reports. |
-| [Gemini Deep Research](https://gemini.google.com) | Google Search and Knowledge Graph. |
+| [Gemini Deep Research](https://gemini.google/about/) | Google Search and Knowledge Graph. |
 | [Perplexity Pro](https://perplexity.ai) | AI search with deep research mode. Real-time citations. |
 | [DeerFlow](https://github.com/bytedance/deer-flow) | ByteDance OSS. Planning, tools, memory, execution. |
 | [GPT Researcher](https://github.com/assafelovic/gpt-researcher) | OSS autonomous comprehensive research. |
@@ -168,7 +168,7 @@ Descriptions in this appendix prioritise delivery model, control surface, operat
 |----------|------------- |
 | [ChatGPT](https://chat.openai.com) | GPTs, Deep Research, Canvas, Agent Mode, vision. GPT-5. |
 | [Claude](https://claude.ai) | Tool use, computer control, MCP, code exec. Chrome, Excel, Cowork. |
-| [Gemini](https://gemini.google.com) | Deep Think, Gems, multi-modal. 1M tokens. Google ecosystem. |
+| [Gemini](https://gemini.google/about/) | Deep Think, Gems, multi-modal. 1M tokens. Google ecosystem. |
 | [Grok](https://x.ai) | Real-time X data. Grok Build. Image gen. |
 | [Meta AI](https://meta.ai) | Llama-powered. WhatsApp/Messenger. Manus acquisition. |
 | [Microsoft Copilot](https://copilot.microsoft.com) | Office 365 integration. Enterprise. |
@@ -191,8 +191,7 @@ Descriptions in this appendix prioritise delivery model, control surface, operat
 | [CAI](https://github.com/aliasrobotics/CAI) | AI pentesting, vuln discovery, red teaming. HITL. |
 | [YAWNING TITAN](https://github.com/dstl/YAWNING-TITAN) | Graph-based cybersecurity simulation. |
 | [PentestGPT](https://github.com/GreyDGL/PentestGPT) | GPT-powered pentesting. Automated reasoning. |
-| [Microsoft Security Copilot](https://microsoft.com/security/copilot) | Enterprise threat detection, incident response. |
+| [Microsoft Security Copilot](https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-security-copilot) | Enterprise threat detection, incident response. |
 | [CrowdStrike Charlotte AI](https://crowdstrike.com) | AI security analyst. Threat hunting. |
 
 ---
-
